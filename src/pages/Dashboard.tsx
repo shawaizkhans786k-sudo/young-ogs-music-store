@@ -1,4 +1,7 @@
-import { supabase } from '../lib/supabase';
+import { inject } from '@vercel/analytics';
+
+// Analytics ko initialize karein
+inject();
 import { Music } from 'lucide-react';
 import React, { useState } from 'react';
 
