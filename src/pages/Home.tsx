@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Music2 } from 'lucide-react'
 
-// Mock components placeholder - adjust imports based on your real project files
-import TrackCard from '../components/TrackCard'
-import ContactSection from '../components/ContactSection'
-import MusicPlayer from '../components/MusicPlayer'
+// Sahi local imports (Ek hi folder mein hain saari files)
+import TrackCard from './TrackCard'
+import ContactSection from './ContactSection'
+import MusicPlayer from './MusicPlayer'
 
 export default function Home() {
   const navigate = useNavigate()
