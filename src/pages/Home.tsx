@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Music2 } from 'lucide-react'
 
-// Imports (Sirf woh jo 100% maujood hain)
-import TrackCard from './TrackCard'
-import MusicPlayer from './MusicPlayer'
+// Sahi root components path jahan aapka data pehle maujood tha
+import TrackCard from '../components/TrackCard'
+import MusicPlayer from '../components/MusicPlayer'
 
-// Contact Section ko yahin andar hi bana diya taake import error na aaye
+// Contact Section ko local rakha hai taake extra file path error na aaye
 function ContactSection() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-ink-800 text-center">
