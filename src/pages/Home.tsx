@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Music2 } from 'lucide-react'
 
-// Sahi local imports (Ek hi folder mein hain saari files)
+// Imports (Sirf woh jo 100% maujood hain)
 import TrackCard from './TrackCard'
-import ContactSection from './ContactSection'
 import MusicPlayer from './MusicPlayer'
+
+// Contact Section ko yahin andar hi bana diya taake import error na aaye
+function ContactSection() {
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-ink-800 text-center">
+      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+      <p className="text-ink-400">Get in touch with Young OG's Music Store for custom beats and tracks.</p>
+    </section>
+  )
+}
 
 export default function Home() {
   const navigate = useNavigate()
