@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Dashboard from './pages/Dashboard'
+import Dashboard from './Dashboard'
 import { inject } from '@vercel/analytics'
 
 // Analytics active karein
