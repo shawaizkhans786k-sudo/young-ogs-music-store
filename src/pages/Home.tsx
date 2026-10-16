@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Music2 } from 'lucide-react'
 
-// Sahi root components path jahan aapka data pehle maujood tha
 import TrackCard from '../components/TrackCard'
 import MusicPlayer from '../components/MusicPlayer'
 
-// Contact Section ko local rakha hai taake extra file path error na aaye
 function ContactSection() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-ink-800 text-center">
@@ -35,9 +33,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-ink-950 text-ink-50">
-      {/* Main Track Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        {/* Empty state */}
         {!loading && !error && filteredTracks.length === 0 && (
           <div className="text-center py-20">
             <Music2 size={48} className="text-ink-700 mx-auto mb-4" />
@@ -49,7 +45,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* Track grid */}
         {!loading && !error && filteredTracks.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {filteredTracks.map((track, index) => (
@@ -66,10 +61,8 @@ export default function Home() {
         )}
       </section>
 
-      {/* Contact section */}
       <ContactSection />
 
-      {/* Footer */}
       <footer className="border-t border-ink-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
@@ -84,7 +77,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Music Player */}
       {currentTrack && (
         <MusicPlayer
           tracks={filteredTracks}
