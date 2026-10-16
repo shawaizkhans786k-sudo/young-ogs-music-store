@@ -1,3 +1,33 @@
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Music2 } from 'lucide-react'
+
+// Mock components placeholder - adjust imports based on your real project files
+import TrackCard from '../components/TrackCard'
+import ContactSection from '../components/ContactSection'
+import MusicPlayer from '../components/MusicPlayer'
+
+export default function Home() {
+  const navigate = useNavigate()
+  const [loading] = useState(false)
+  const [error] = useState(false)
+  const [searchQuery] = useState('')
+  const [activeGenre] = useState('All')
+  const [filteredTracks] = useState<any[]>([])
+  const [currentIndex, setCurrentIndex] = useState(-1)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const currentTrack = currentIndex !== -1 ? filteredTracks[currentIndex] : null
+
+  const handlePlayTrack = (index: number) => {
+    setCurrentIndex(index)
+    setIsPlaying(true)
+  }
+
+  return (
+    <div className="min-h-screen bg-ink-950 text-ink-50">
+      {/* Main Track Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         {/* Empty state */}
         {!loading && !error && filteredTracks.length === 0 && (
           <div className="text-center py-20">
@@ -55,5 +85,5 @@
         />
       )}
     </div>
-  );
+  )
 }
