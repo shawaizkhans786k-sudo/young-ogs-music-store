@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Music2 } from 'lucide-react'
 
-import TrackCard from '../components/TrackCard'
-import MusicPlayer from '../components/MusicPlayer'
+import TrackCard from './TrackCard'
+import MusicPlayer from './MusicPlayer'
 
 function ContactSection() {
   return (
