@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Dashboard from './Dashboard'
+import Home from './Home'
 import { inject } from '@vercel/analytics'
 
-// Analytics active karein
+// Vercel Analytics active karein
 inject()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Dashboard />
+    <Home />
   </React.StrictMode>,
 )
