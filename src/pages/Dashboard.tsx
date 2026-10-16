@@ -9,22 +9,20 @@ export default function Dashboard({ recentTracks, setForm, INITIAL_FORM, removeC
   return (
     <div className="p-6 bg-ink-900 min-h-screen text-white">
       <div className="max-w-4xl mx-auto">
-              {/* YouTube Button */}
-      <div className="flex justify-end mb-4">
-        <a 
-          href="https://youtube.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl font-medium transition-colors text-sm"
-        >
-          <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11c-.51 1.871-.51 5.776-.51 5.776s0 3.905.51 5.776a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11c.51-1.871.51-5.776.51-5.776s0-3.905-.51-5.776zm-14.25 9.03V8.807L15.3 12l-6.052 3.193z"/>
-          </svg>
-          YouTube Channel
-        </a>
-      </div>
         <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
           <div className="flex justify-end">
+                        {/* YouTube Button */}
+            <a 
+              href="https://youtube.com"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mr-4 flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl font-medium transition-colors text-sm"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11c-.51 1.871-.51 5.776-.51 5.776s0 3.905.51 5.776a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11c.51-1.871.51-5.776.51-5.776s0-3.905-.51-5.776zm-14.25 9.03V8.807L15.3 12l-6.052 3.193z"/>
+              </svg>
+              YouTube Channel
+            </a>
             <button
               type="button"
               onClick={() => {
